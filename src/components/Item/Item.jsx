@@ -30,27 +30,37 @@ function Item(props) {
       });
   }, [id]);
 
-  const names = data.arr.map((el, i) => (
-    <li className='list__elem' key={i}>
-      {el}
-    </li>
-  ));
+  const names = data.arr
+    .filter((item, index) => data.arr.indexOf(item) === index)
+    .map((el, i) => (
+      <li className='list__elem' key={i}>
+        {el}
+      </li>
+    ));
 
   const { loading, name } = data;
   return (
     <main className='main'>
       {loading ? (
-        <p className='stable'>Стабильно</p>
+        <p className='stable'>▐ ▐ ▐ ▐ ▐</p>
       ) : (
-        <p className='loading'>Загрузка...</p>
+        <p className='loading'>▬ ▬ ▬ ▬</p>
       )}
-
       <button className='button, next__planet' onClick={handle}>
         Получить планету
       </button>
 
       <p>Текущая планета - {name}</p>
-      <ul className='list'>{names}</ul>
+      <ul
+        style={{
+          width: 200,
+          border: '3px solid black',
+          boxShadow: '4px 4px 5px 0px rgba(0,0,0,.74)',
+        }}
+        className='list'
+      >
+        {names}
+      </ul>
     </main>
   );
 }
