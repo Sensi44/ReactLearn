@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
 
-import './Item.scss';
+import classes from './Item.module.scss';
 
-function Item(props) {
+const classNames = require('classnames');
+
+const Item = (props) => {
   const [data, setData] = useState({
     name: 'No-Name',
     loading: false,
@@ -38,9 +40,23 @@ function Item(props) {
       </li>
     ));
 
+  const btnClass = classNames({
+    [classes.list]: true,
+    [classes.red]: names.length > 2,
+    [classes.blue]: names.length > 3,
+    'blue-2': names.length > 4,
+  });
+
+  const btnClass2 = classNames({
+    [classes.list]: true,
+    [classes.red]: names.length > 3,
+    [classes.blue]: names.length > 4,
+    'blue-2': names.length > 5,
+  });
+
   const { loading, name } = data;
   return (
-    <main className='main'>
+    <main className={classes.main}>
       {loading ? (
         <p className='stable'>▐ ▐ ▐ ▐ ▐</p>
       ) : (
@@ -49,20 +65,11 @@ function Item(props) {
       <button className='button, next__planet' onClick={handle}>
         Получить планету
       </button>
-
       <p>Текущая планета - {name}</p>
-      <ul
-        style={{
-          width: 200,
-          border: '3px solid black',
-          boxShadow: '4px 4px 5px 0px rgba(0,0,0,.74)',
-        }}
-        className='list'
-      >
-        {names}
-      </ul>
+      <ul className={btnClass}>{names}</ul>
+      <ul className={btnClass2}>{names}</ul>
     </main>
   );
-}
+};
 
 export default Item;
