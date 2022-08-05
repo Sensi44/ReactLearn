@@ -44,14 +44,14 @@ const Item = (props) => {
     [classes.list]: true,
     [classes.red]: names.length > 2,
     [classes.blue]: names.length > 3,
-    'blue-2': names.length > 4,
+    [classes['blue-2']]: names.length > 4,
   });
 
   const btnClass2 = classNames({
     [classes.list]: true,
     [classes.red]: names.length > 3,
     [classes.blue]: names.length > 4,
-    'blue-2': names.length > 5,
+    [classes['blue-2']]: names.length > 5,
   });
 
   const { loading, name } = data;
