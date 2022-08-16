@@ -68,6 +68,7 @@ const Item = (props) => {
       <p>Текущая планета - {name}</p>
       <ul className={btnClass}>{names}</ul>
       <ul className={btnClass2}>{names}</ul>
+      <div>{props.name}</div>
     </main>
   );
 };
