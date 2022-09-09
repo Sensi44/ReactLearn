@@ -1,3 +1,6 @@
-import Alert from './Alert.jsx';
+export { default as Alert } from './Alert';
 
-export default Alert;
+// Раньше было так:
+// import Alert from './Alert';
+//
+// export default Alert;

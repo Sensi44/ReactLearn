@@ -1,5 +1,5 @@
 import React from 'react';
-// eslint-disable-next-line import/no-cycle,import/named
+
 import { useAlert, useAlertToggle } from '../AlertContext';
 
 function Alert() {

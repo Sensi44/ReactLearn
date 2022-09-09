@@ -1,5 +1,5 @@
 import React from 'react';
-// eslint-disable-next-line import/no-cycle,import/named
+
 import { useAlert, useAlertToggle } from '../AlertContext';
 
 function Input() {
@@ -10,8 +10,7 @@ function Input() {
   return (
     <>
       <h1>Text привет в примере с useContext</h1>
-      <button onClick={toggle}
-              className="btn btn-success">
+      <button onClick={toggle} className='btn btn-success'>
         {`${alert} Показать алерт`}
       </button>
     </>
