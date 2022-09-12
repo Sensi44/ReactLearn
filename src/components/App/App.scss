@@ -1,10 +1,23 @@
-.navigation {
+.navigation, .navigation2 {
   display: flex;
+  margin-bottom: 30px;
 }
 
-.navigation > a {
+.navigation > a, .navigation2 > a {
   margin: 10px;
   border: 1px solid black;
   border-radius: 3px;
   padding: 4px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.wrapper {
+  border: 3px solid black;
+  width: 40%;
+  height: 50vh;
 }

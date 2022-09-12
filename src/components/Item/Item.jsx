@@ -8,7 +8,6 @@ const classNames = require('classnames');
 
 const Item = (props) => {
   const TTT = props.class;
-  console.log(props);
   const [data, setData] = useState({
     name: 'No-Name',
     loading: false,
@@ -22,9 +21,8 @@ const Item = (props) => {
 
   useEffect(() => {
     setData((b) => ({
-      name: b.name,
+      ...b,
       loading: false,
-      arr: [...b.arr],
     }));
 
     fetch(`https://swapi.dev/api/planets/${id}/`)
