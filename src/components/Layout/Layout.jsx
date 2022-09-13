@@ -1,10 +1,8 @@
 import React from 'react';
-import { Outlet, NavLink } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
 
 import { CustomLink } from '../CustomLink';
 import './Layout.scss';
-
-// const setActive = ({ isActive }) => (isActive ? 'active-link' : '');
 
 const Layout = () => (
   <>

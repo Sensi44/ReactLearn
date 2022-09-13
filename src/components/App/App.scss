@@ -45,8 +45,12 @@ body {
 
 footer {
   background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   color: white;
-  line-height: 60px;
+  height: 60px;
   text-align: center;
   font-size: 25px;
 }
