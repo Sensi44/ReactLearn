@@ -1,26 +1,29 @@
 import React from 'react';
-import { Link, Outlet } from 'react-router-dom';
+import { Outlet, NavLink } from 'react-router-dom';
+
+import { CustomLink } from '../CustomLink';
+import './Layout.scss';
+
+// const setActive = ({ isActive }) => (isActive ? 'active-link' : '');
 
 const Layout = () => (
   <>
     <header>
       <div className='navigation'>
-        <Link to='/'>Home</Link>
-        <Link to='/people'>People</Link>
-        <Link to='/planets'>Planets</Link>
-        <Link to='/test'>Test</Link>
-      </div>
-      <div className='navigation2'>
-        <Link to='/'>Home</Link>
-        <Link to='/about'>about</Link>
-        <Link to='/BlogPage'>BlogPage</Link>
-        <Link to='/badUrl'>BadUrl</Link>
+        <CustomLink to='/'>Home</CustomLink>
+        <CustomLink to='/about'>about</CustomLink>
+        <CustomLink to='/posts'>posts</CustomLink>
+        <CustomLink to='/posts/3'>posts-3</CustomLink>
+        <CustomLink to='/posts/new'>new</CustomLink>
+        <CustomLink to='/badUrl'>BadUrl</CustomLink>
       </div>
     </header>
+
     <main className='container'>
       <Outlet />
+      {/* Сюда будет отрисовываться всё дочернее содержимое */}
     </main>
-    {/* Сюда будет отрисовываться всё дочернее содержимое */}
+
     <footer>Footer 2022</footer>
   </>
 );

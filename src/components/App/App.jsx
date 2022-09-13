@@ -4,11 +4,14 @@ import { Routes, Route } from 'react-router-dom';
 import Item from '../Item';
 import withClass from '../withClass/withClass';
 import { Layout } from '../Layout';
-import { Element1 } from '../Element1';
-import { About } from '../About';
-import { BlogPage } from '../BlogPage';
-import { HomePage } from '../HomePage';
-import { NotFoundPage } from '../NotFoundPage';
+// import { Element1 } from '../Element1';
+import { About } from '../../pages/About';
+import { BlogPage } from '../../pages/BlogPage';
+import { SinglePage } from '../../pages/SinglePage';
+import { HomePage } from '../../pages/HomePage';
+import { NotFoundPage } from '../../pages/NotFoundPage';
+import { CreatePost } from '../../pages/CreatePost';
+import { EditPost } from '../../pages/EditPost';
 import './App.scss';
 
 function App() {
@@ -21,17 +24,11 @@ function App() {
         <Route path='/' element={<Layout />}>
           <Route index element={<HomePage />} />
           <Route path='about' element={<About />} />
-          <Route path='BlogPage' element={<BlogPage />} />
+          <Route path='posts/' element={<BlogPage />} />
+          <Route path='posts/:id' element={<SinglePage />} />
+          <Route path='posts/:id/edit' element={<EditPost />} />
+          <Route path='posts/new' element={<CreatePost />} />
           <Route path='*' element={<NotFoundPage />} />
-
-          <Route path='/' element={<div>Go to welcome bro</div>} />
-          <Route path='/people' element={<NewTest />} />
-          <Route
-            path='/people/:id'
-            render={(match, location, history) => <Element1 id='3' />}
-          />
-          <Route path='/planets' element={<NewTest2 />} />
-          <Route path='/test' element={<Item class='H234' />} />
         </Route>
       </Routes>
     </>

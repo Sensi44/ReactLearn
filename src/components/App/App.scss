@@ -1,23 +1,52 @@
-.navigation, .navigation2 {
-  display: flex;
-  margin-bottom: 30px;
+:root {
+  --color-active: cadetblue;
 }
 
-.navigation > a, .navigation2 > a {
+.navigation {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 4px;
+  background-color: aquamarine;
+}
+
+.posts {
+  text-align: left;
+  margin-left: 20px;
+}
+
+.navigation > a {
   margin: 10px;
   border: 1px solid black;
   border-radius: 3px;
-  padding: 4px;
+  padding: 5px;
+  text-decoration: none;
+  color: black;
 }
 
 body {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
+}
+
+.container {
+  min-height: 300px;
+  text-align: center;
 }
 
 .wrapper {
   border: 3px solid black;
-  width: 40%;
-  height: 50vh;
+  width: 700px;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  line-height: 60px;
+  text-align: center;
+  font-size: 25px;
 }
