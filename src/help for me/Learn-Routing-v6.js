@@ -27,7 +27,7 @@
 
 // <Routes>
 //   <Route path='/' element={<HomePage />} />
-//   <Route path='/about' element={<About />} />
+//   <Route path='/about' element={<Layout />} />
 //   <Route path='/BlogPage' element={<BlogPage />} />
 //   <Route path='*' element={<NotFoundPage />} />
 // </Routes>
@@ -50,5 +50,7 @@
 // '/' === '/planets' - exact={false}
 
 // ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+// Outlet - выход, выходное устройство
+
 // ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
 // ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
