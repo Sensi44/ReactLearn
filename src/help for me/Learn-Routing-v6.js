@@ -102,11 +102,11 @@
 // необходимой для управления переходами и прочим.
 
 // ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
-//
-//
-//
-//
-//
+// useSearchParams - поиск
+// const [searchParams, setSearchParams] = useSearchParams();
+// const postQuery = searchParams.get('post');
+// // URL.ru/posts?post=abc&data=
+// -- пример на странице BlogPage.jsx & BlogFilter
 
 // ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
 // ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
