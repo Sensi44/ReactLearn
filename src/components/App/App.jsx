@@ -4,7 +4,6 @@ import { Routes, Route, Navigate } from 'react-router-dom';
 import Item from '../Item';
 import withClass from '../withClass/withClass';
 import { Layout } from '../Layout';
-// import { RequireAuth } from '../RequireAuth';
 import { About } from '../../pages/About';
 import { BlogPage } from '../../pages/BlogPage';
 import { SinglePage } from '../../pages/SinglePage';
@@ -18,15 +17,18 @@ import { AuthProvider } from '../../hoc/AuthProvider';
 import './App.scss';
 
 function App() {
-  const NewTest = withClass(Item, 'people'); // HOC
-  const NewTest2 = withClass(Item, 'planets'); // HOC
+  // const NewTest = withClass(Item, 'people'); // HOC
+  // const NewTest2 = withClass(Item, 'planets'); // HOC
 
   return (
     <AuthProvider>
       <Routes>
         <Route path='/' element={<Layout />}>
           <Route index element={<HomePage />} />
-          <Route path='about' element={<About />} />
+          <Route path='/about' element={<About />}>
+            <Route path='contacts' element={<p>Our contacts</p>} />
+            <Route path='team' element={<p>Our team</p>} />
+          </Route>
           <Route path='about-us' element={<Navigate to='/about' replace />} />
           <Route path='posts/' element={<BlogPage />} />
           <Route path='posts/:id' element={<SinglePage />} />
