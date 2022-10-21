@@ -1,7 +1,7 @@
 import React from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 
-import Item from '../Item';
+// import Item from '../Item';
 import withClass from '../withClass/withClass';
 import { Layout } from '../Layout';
 import { About } from '../../pages/About';
@@ -14,12 +14,14 @@ import { EditPost } from '../../pages/EditPost';
 import { LoginPage } from '../../pages/LoginPage';
 import { RequireAuth } from '../../hoc/RequireAuth';
 import { AuthProvider } from '../../hoc/AuthProvider';
+// eslint-disable-next-line import/extensions
+import { aaa } from '../../pages/test.ts';
 import './App.scss';
 
 function App() {
   // const NewTest = withClass(Item, 'people'); // HOC
   // const NewTest2 = withClass(Item, 'planets'); // HOC
-
+  console.log(aaa);
   return (
     <AuthProvider>
       <Routes>
