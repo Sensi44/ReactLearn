@@ -34,7 +34,7 @@
     "import",
     "@typescript-eslint"
   ],
-  "parser": "@babel/eslint-parser",
+  "parser": "@typescript-eslint/parser",
   "rules": {
     "import/prefer-default-export": "off",
     "no-console": "off", //"error"
